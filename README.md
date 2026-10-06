@@ -233,16 +233,6 @@ QUICK_TEST = True
 
 This reduces epochs, runs, and synthetic image generation. It should only be used for pipeline testing and not for final reported results.
 
-## Important Implementation Notes
-
-Several methodological details are ambiguous in the source methodology and are therefore explicitly implemented as assumptions:
-
-- Latent dimension is set to 100 where different values are reported.
-- The classifier uses four softmax outputs because there are four classes.
-- ResNet152 is used because standard Keras does not provide ResNet151.
-- The CML convolutional layer uses 32 filters because the number of filters is not specified in the methodology.
-- `LEAK_FREE=True` is recommended for publication-quality experiments to prevent augmentation leakage.
-
 ## Overall Pipeline
 
 ```text
